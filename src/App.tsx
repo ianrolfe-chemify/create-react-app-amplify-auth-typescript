@@ -1,7 +1,7 @@
 import React from "react";
 import { Amplify } from "aws-amplify";
 import {
-  AmplifyProvider,
+  ThemeProvider,
   Authenticator,
   Button,
   Flex,
@@ -19,7 +19,7 @@ Amplify.configure(aws_exports);
 
 const App = () => {
   return (
-    <AmplifyProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Authenticator>
         {({ signOut, user }) => (
           <Flex
@@ -52,7 +52,7 @@ const App = () => {
           </Flex>
         )}
       </Authenticator>
-    </AmplifyProvider>
+    </ThemeProvider>
   );
 };
 
